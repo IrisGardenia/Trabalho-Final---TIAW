@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes - Preço Imbatível, Entrega Veloz.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assents/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="produtos.js"></script>
+    <script src="program.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <img src="assents/menu-icon.png" alt="Ícone do menu" class="menu-icon" onclick="toggleMenu()">
+        <a href="index.html" class="logo">Hermes</a>
+        <div class="icons">
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/user-icon.png" alt="Ícone de usuário">
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/favorite-icon.png" alt="Ícone de item favorito">
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/cart-icon.png" alt="Ícone de carrinho de compras">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="input-container">
+        <img src="assents/search-icon.png" width="20px" class="search-icon" alt="Ícone de pesquisa (lupa)">
+        <input type="text" id="search-input" placeholder="Digite o que você procura...">
+    </div>
+</header>
+
+<nav>
+    <ul class="menu" id="menu">
+        <li><img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()"></li>
+        <li><h1>Hermes</h1></li>
+        <li><p>Categorias</p></li>
+        <li class="menu-item"><a href="#headsets">Headsets Games</a></li>
+        <li class="menu-item"><a href="#cadeiras">Cadeiras Gamers</a></li>
+        <li class="menu-item"><a href="#monitores">Monitores</a></li>
+        <li class="menu-item"><a href="#mouses">Mouses</a></li>
+        <li class="menu-item"><a href="#teclados">Teclados</a></li>
+        <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
+        <li class="menu-item"><a href="#outros">Outros</a></li>
+        <li><p>Configurações</p></li>
+        <li class="menu-item"><a href="#">Minha conta</a></li>
+        <li class="menu-item"><a href="#">Quem Somos</a></li>
+    </ul>
+</nav>
+
+<nav>
+    <a href="#">
+        <div class="card-one">
+            <img src="assents/banner1.png" width="100%" alt="Logo do site: ilustração de Hermes ">
+        </div>
+    </a>
+</nav>
+
+<div class="container mt-5">
+    <div id="headset" class="row produtos-categoria">
+        <h2>Headsets</h2>
+        <div id="headset" class="col-12"></div>
+    </div>
+    <div id="cadeiras" class="row produtos-categoria">
+        <h2>Cadeiras</h2>
+        <div id="cadeiras" class="col-12"></div>
+    </div>
+    <div id="monitores" class="row produtos-categoria">
+        <h2>Monitores</h2>
+        <div id="produtos-monitores" class="col-12"></div>
+    </div>
+    <div id="mouses" class="row produtos-categoria">
+        <h2>Mouses</h2>
+        <div id="produtos-mouses" class="col-12"></div>
+    </div>
+    <div id="teclados" class="row produtos-categoria">
+        <h2>Teclados</h2>
+        <div id="produtos-teclados" class="col-12"></div>
+    </div>
+    <div id="notebooks" class="row produtos-categoria">
+        <h2>Notebooks Gamers</h2>
+        <div id="produtos-notebooks" class="col-12"></div>
+    </div>
+    <div id="outros" class="row produtos-categoria">
+        <h2>Outros</h2>
+        <div id="produtos-outros" class="col-12"></div>
+    </div>
+    <div id="produtos-container" class="row produtos-categoria"></div> <!-- Contêiner para produtos filtrados -->
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="informacoesempresa">
+                    <h4>Hermes</h4>
+                </div>
+                <p>Site de Periféricos Hermes</p>
+                <p>Rua dos Periféricos, 123</p>
+                <p>Betim, MG, Brasil</p>
+                <p>Telefone: (31) 1234-5678</p>
+                <p>Email: contato@hermes.com.br</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Redes Sociais</h4>
+                <p>Siga-nos nas redes sociais:</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Facebook</a></li>
+                    <li class="list-inline-item"><a href="#">Instagram</a></li>
+                    <li class="list-inline-item"><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="footer-address">Endereço: Betim, MG - Brasil</p>
+            </div>
+        </div>
+    </div>
+</footer>
