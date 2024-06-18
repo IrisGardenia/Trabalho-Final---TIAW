@@ -46,13 +46,14 @@
 <nav>
     <ul class="menu" id="menu">
         <li><img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()"></li>
-        <li><h1>Hermes</h1></li>
+        <li><h1> <b>Hermes</b></h1></li>
         <li><p>Categorias</p></li>
-        <li class="menu-item"><a href="#headsets">Headsets Games</a></li>
-        <li class="menu-item"><a href="#cadeiras">Cadeiras Gamers</a></li>
+      
+       
         <li class="menu-item"><a href="#monitores">Monitores</a></li>
         <li class="menu-item"><a href="#mouses">Mouses</a></li>
         <li class="menu-item"><a href="#teclados">Teclados</a></li>
+        <li class="menu-item"><a href="#headsets">Headsets Gamers</a></li>
         <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
         <li class="menu-item"><a href="#outros">Outros</a></li>
         <li><p>Configurações</p></li>
@@ -70,36 +71,19 @@
 </nav>
 
 <div class="container mt-5">
-    <div id="headset" class="row produtos-categoria">
-        <h2>Headsets</h2>
-        <div id="headset" class="col-12"></div>
+    <div id="categorias-container" class="row">
+        <!-- Suas categorias aqui -->
+        <div id="produtos-container" class="row"></div>
     </div>
-    <div id="cadeiras" class="row produtos-categoria">
-        <h2>Cadeiras</h2>
-        <div id="cadeiras" class="col-12"></div>
-    </div>
-    <div id="monitores" class="row produtos-categoria">
-        <h2>Monitores</h2>
-        <div id="produtos-monitores" class="col-12"></div>
-    </div>
-    <div id="mouses" class="row produtos-categoria">
-        <h2>Mouses</h2>
-        <div id="produtos-mouses" class="col-12"></div>
-    </div>
-    <div id="teclados" class="row produtos-categoria">
-        <h2>Teclados</h2>
-        <div id="produtos-teclados" class="col-12"></div>
-    </div>
-    <div id="notebooks" class="row produtos-categoria">
-        <h2>Notebooks Gamers</h2>
-        <div id="produtos-notebooks" class="col-12"></div>
-    </div>
-    <div id="outros" class="row produtos-categoria">
-        <h2>Outros</h2>
-        <div id="produtos-outros" class="col-12"></div>
-    </div>
-    <div id="produtos-container" class="row produtos-categoria"></div> <!-- Contêiner para produtos filtrados -->
 </div>
+       
+    </div>
+
+    <div id="produtos-container" class="row">
+        <!-- Aqui serão exibidos os produtos -->
+    </div>
+</div>
+
 
 <footer>
     <div class="container">
