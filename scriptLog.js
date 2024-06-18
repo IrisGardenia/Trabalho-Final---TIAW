@@ -28,8 +28,7 @@ function Entrar() {
     })
 
     if (usuario.value == userValid.user && senha.value == userValid.senha) {
-        /* Aqui ele abre o site do Hermes */
-        window.location.href = ''
+        window.location.href = 'index.html'
 
         let token = Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
