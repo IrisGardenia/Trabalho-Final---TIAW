@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #1e1f20;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card {
+    color: white;
+    background-color: #424242;
+    padding: 30px;
+    border-radius: 6%;
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.400);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block; /*Ocupa toda a linha*/
+    border: 0;
+    border-bottom: 1px solid #1e1f20;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid white;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label, 
+.label-float input:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+}
+
+button {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    padding: 7px;
+    font-weight: bolder;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: white;
+    color: #1e1f20;
+    transition: all .4s ease-out;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+}
+
+p {
+    font-size: 14pt;
+    text-align: center;
+}
+
+a {
+    color: rgb(95, 95, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    transition: all .3s ease-out;
+}
+
+#msgError {
+    text-align: center;
+    color: red;
+    background-color: black;
+    padding: 10px;
+    border-radius: 6px;
+    display: none;
+}
