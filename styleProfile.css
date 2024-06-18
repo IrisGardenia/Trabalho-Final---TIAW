@@ -8,6 +8,11 @@ body {
     font-size: 130%;
 }
 
+#check {
+    opacity: 0; /* Torna o checkbox transparente */
+    appearance: none; /* Remove o estilo padrão do navegador */
+}
+
 .nav-bar {
     width: 100%;
     height: 70px;
