@@ -1,81 +1,4 @@
 const produtosPorCategoria = {
-    headsets: [
-        {
-            titulo: "Headset Games Astro A30 Xbox Wireless",
-            descricao: "Headset sem fio para Xbox com som de alta qualidade.",
-            preco: "R$ 899,99",
-            imagem: "assents/HEADSET GAMER ASTRO A30 XBOX, WIRELESS, DRIVERS.jpg"
-        },
-        {
-            titulo: "Headset Gamer JBL Quantum 360X",
-            descricao: "Headset gamer JBL com som surround e microfone ajustável.",
-            preco: "R$ 649,99",
-            imagem: "assents/HEADSET GAMER JBL QUANTUM 360X, WIRELESS.jpg"
-        },
-        {
-            titulo: "Headset Gamer DeadDragon Seuz Pro",
-            descricao: "Headset gamer com design ergonômico e som cristalino.",
-            preco: "R$ 499,99",
-            imagem: "assents/HEADSET GAMER REDRAGON ZEUS PRO, WIRELESS, 7.1 SURROUND.jpg"
-        },
-        {
-            titulo: "Headset Gamer Multi Warrior Volker 7.1 Preto",
-            descricao: "Headset gamer com som surround 7.1 e microfone destacável.",
-            preco: "R$ 399,99",
-            imagem: "assents/ph2582.jpg"
-        },
-        {
-            titulo: "Headset Gamer Creative SXFI",
-            descricao: "Headset gamer com iluminação RGB, drivers de 50mm, na cor preta, modelo 06EF08800000, proporcionando som imersivo e alta qualidade de áudio.",
-            preco: "R$ 599,99",
-            imagem: "assents/headset2.jpg"
-        },
-        {
-            titulo: "Headset Gamer Corsair Elite Wireless Void RGB Branco",
-            descricao: "Headset gamer sem fio com iluminação RGB e áudio imersivo.",
-            preco: "R$ 799,99",
-            imagem: "assents/shopping (2) (1).webp"
-        }
-    ],
-    cadeiras: [
-        {
-           
-            titulo: "Cadeira Gamer Cougar Armor Titan",
-            descricao: "Cadeira gamer ergonômica com ajuste de altura e reclinação.",
-            preco: "R$ 1.399,99",
-            imagem: "assents/CADEIRA GAMER COUGAR TERMINATOR, PRETO,.jpg"
-        },
-        {
-            titulo: "Cadeira Gamer Cougar Terminator",
-            descricao: "Cadeira gamer com apoio lombar e revestimento de couro sintético.",
-            preco: "R$ 1.299,99",
-            imagem: "assents/CADEIRA GAMER COUGAR ARMOR TITAN PRO ROYAL,.jpg"
-        },
-        {
-            titulo: "Cadeira Gamer DT3 N10, Preto, 14105-1",
-            descricao: "Cadeira gamer DT3 com design ergonômico e suporte para longas sessões de jogo.",
-            preco: "R$ 1.099,99",
-            imagem: "assents/dt3.jpg"
-        },
-        {
-            titulo: "Cadeira Gamer DT3 N10 XL",
-            descricao: "Cadeira gamer DT3 N10 XL com maior conforto e suporte reforçado.",
-            preco: "R$ 1.599,99",
-            imagem: "assents/dnt1.jpg"
-        },
-        {
-            titulo: "Cadeira Gamer ThunderX3",
-            descricao: "Cadeira gamer ThunderX3 com design ergonômico e confortável.",
-            preco: "R$ 1.199,99",
-            imagem: "assents/thunder2.jpg"
-        },
-        {
-            titulo: "Cadeira Gamer ThunderX3 Yama1 Ergonômica Preta/Vermelha, 69675",
-            descricao: "Cadeira gamer ThunderX3 Yama1 com ajustes ergonômicos e estilo vibrante.",
-            preco: "R$ 1.299,99",
-            imagem: "assents/thunder.jpg"
-        }
-    ],
     monitores: [
         {
             titulo: "Monitor AOC Porsche Design",
@@ -156,7 +79,7 @@ const produtosPorCategoria = {
         {
             titulo: "Teclado Óptico Mecânico Gamer",
             descricao: "Teclado gamer com switches ópticos e iluminação RGB.",
-            preco: "R$ 699,99",
+            preco: "R$ 1699,99",
             imagem: "assents/TECLADO OPTICO-MECANICO GAMER CORSAIR K100 RGB, US, SWITCH OPX, PRETO, CH-912A01A-NA.jpg"
         },
        
@@ -233,6 +156,84 @@ const produtosPorCategoria = {
             imagem: "assents/giga2.jpg"
         }
     ],
+    headsets: [
+        {
+            titulo: "Headset Games Astro A30 Xbox Wireless",
+            descricao: "Headset sem fio para Xbox com som de alta qualidade.",
+            preco: "R$ 899,99",
+            imagem: "assents/HEADSET GAMER ASTRO A30 XBOX, WIRELESS, DRIVERS.jpg"
+        },
+        {
+            titulo: "Headset Gamer JBL Quantum 360X",
+            descricao: "Headset gamer JBL com som surround e microfone ajustável.",
+            preco: "R$ 649,99",
+            imagem: "assents/HEADSET GAMER JBL QUANTUM 360X, WIRELESS.jpg"
+        },
+        {
+            titulo: "Headset Gamer DeadDragon Seuz Pro",
+            descricao: "Headset gamer com design ergonômico e som cristalino.",
+            preco: "R$ 499,99",
+            imagem: "assents/HEADSET GAMER REDRAGON ZEUS PRO, WIRELESS, 7.1 SURROUND.jpg"
+        },
+        {
+            titulo: "Headset Gamer Multi Warrior Volker 7.1 Preto",
+            descricao: "Headset gamer com som surround 7.1 e microfone destacável.",
+            preco: "R$ 399,99",
+            imagem: "assents/ph2582.jpg"
+        },
+        {
+            titulo: "Headset Gamer Creative SXFI",
+            descricao: "Headset gamer com iluminação RGB, drivers de 50mm, na cor preta, modelo 06EF08800000, proporcionando som imersivo e alta qualidade de áudio.",
+            preco: "R$ 599,99",
+            imagem: "assents/headset2.jpg"
+        },
+        {
+            titulo: "Headset Gamer Corsair Elite Wireless Void RGB Branco",
+            descricao: "Headset gamer sem fio com iluminação RGB e áudio imersivo.",
+            preco: "R$ 799,99",
+            imagem: "assents/shopping (2) (1).webp"
+        }
+    ],
+    cadeirasGamer: [
+        {
+            titulo: "Cadeira Gamer Cougar Armor Titan",
+            descricao: "Cadeira gamer ergonômica com ajuste de altura e reclinação.",
+            preco: "R$ 1.399,99",
+            imagem: "assents/CADEIRA GAMER COUGAR TERMINATOR, PRETO,.jpg"
+        },
+        {
+            titulo: "Cadeira Gamer Cougar Terminator",
+            descricao: "Cadeira gamer com apoio lombar e revestimento de couro sintético.",
+            preco: "R$ 1.299,99",
+            imagem: "assents/CADEIRA GAMER COUGAR ARMOR TITAN PRO ROYAL,.jpg"
+        },
+        {
+            titulo: "Cadeira Gamer DT3 N10, Preto, 14105-1",
+            descricao: "Cadeira gamer DT3 com design ergonômico e suporte para longas sessões de jogo.",
+            preco: "R$ 1.099,99",
+            imagem: "assents/dt3.jpg"
+        },
+        {
+            titulo: "Cadeira Gamer DT3 N10 XL",
+            descricao: "Cadeira gamer DT3 N10 XL com maior conforto e suporte reforçado.",
+            preco: "R$ 1.599,99",
+            imagem: "assents/dnt1.jpg"
+        },
+        {
+            titulo: "Cadeira Gamer ThunderX3",
+            descricao: "Cadeira gamer ThunderX3 com design ergonômico e confortável.",
+            preco: "R$ 1.199,99",
+            imagem: "assents/thunder2.jpg"
+        },
+        {
+            titulo: "Cadeira Gamer ThunderX3 Yama1 Ergonômica Preta/Vermelha, 69675",
+            descricao: "Cadeira gamer ThunderX3 Yama1 com ajustes ergonômicos e estilo vibrante.",
+            preco: "R$ 1.299,99",
+            imagem: "assents/thunder.jpg"
+        }
+    ],
+
+
     placasDeVideo: [
         {
             titulo: "Placa de Vídeo ASUS GeForce RTX 4080",
@@ -364,3 +365,5 @@ const produtosPorCategoria = {
         }
     ]
 };    
+
+
