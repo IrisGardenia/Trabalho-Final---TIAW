@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff!important; 
+    background-color: #1e1f20!important; 
 }
 
 header {
@@ -851,23 +851,6 @@ h4 {
     text-transform: capitalize; 
 }
 
-#message {
-    display: none; /* Inicialmente oculto */
-    position: fixed; /* Posição fixa para ficar no centro da página */
-    margin-top: 80%; 
-    left: 50%; /* Alinha ao centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centraliza o elemento */
-    background-color:#1e1f20; /* Cor de fundo */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
-    font-family: Verdana, Arial, sans-serif; /* Fonte Verdana */
-    font-weight: bold; /* Texto em negrito */
-    color: #ed0303 !important; /* Cor do texto azul */
-    text-align: center; /* Alinhamento central do texto */
-    max-width: 80%; /* Largura máxima */
-    z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
-}
 
 
 
@@ -933,3 +916,15 @@ h4 {
    
 }
 
+
+
+#message {
+    text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   background-color: #303030;
+   color: #e90909;
+ font-weight: bold;
+ border-radius: 6px;
+ border: none;
+
+}
