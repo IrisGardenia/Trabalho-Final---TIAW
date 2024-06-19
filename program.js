@@ -71,6 +71,7 @@ function renderizarCategoria(nomeCategoria, produtos) {
     // Adicionar o título da categoria com formatação
     const tituloCategoria = document.createElement('h4');
     tituloCategoria.textContent = formatarNomeCamelCase(nomeCategoria);
+    tituloCategoria.style.color = '#ffffff';
     categoriaDiv.appendChild(tituloCategoria);
 
     // Criar uma div para os produtos da categoria
@@ -83,7 +84,7 @@ function renderizarCategoria(nomeCategoria, produtos) {
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
-            <div class="card product-card" style="background-color: #1e1f20;">
+            <div class="card product-card" style="background-color: #303030;">
                 <a href="detalhes-produto.html?id=${produto.id}&categoria=${nomeCategoria}">
                     <img src="${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
                 </a>
