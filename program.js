@@ -1,13 +1,15 @@
-function formatarNomeCamelCase(camelCase) {
-    return camelCase
-        .replace(/([A-Z])/g, ' $1') // Adiciona um espaço antes de cada letra maiúscula
-        .replace(/^./, function(str){ return str.toUpperCase(); }); // Coloca a primeira letra em maiúscula
-}
+
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search-input');
+    const message = document.getElementById('message');
+
     searchInput.addEventListener('input', function () {
-        const query = searchInput.value.toLowerCase();
+        const query = searchInput.value.toLowerCase().trim();
         filtrarProdutos(query);
+
+        if (!query) {
+            message.style.display = 'none';
+        }
     });
 
     // Renderiza todos os produtos inicialmente
@@ -40,12 +42,22 @@ function filtrarProdutos(termo) {
         });
     });
 
-    // Renderizar os produtos filtrados por categoria
     const container = document.getElementById('categorias-container');
     container.innerHTML = ''; // Limpa as categorias existentes
-    Object.keys(produtosFiltradosPorCategoria).forEach(categoria => {
-        renderizarCategoria(categoria, produtosFiltradosPorCategoria[categoria]);
-    });
+
+    if (Object.keys(produtosFiltradosPorCategoria).length > 0) {
+        message.style.display = 'none';
+        Object.keys(produtosFiltradosPorCategoria).forEach(categoria => {
+            renderizarCategoria(categoria, produtosFiltradosPorCategoria[categoria]);
+        });
+
+        // Scroll suave para o contêiner de produtos
+        const produtosContainer = document.getElementById('categorias-container');
+        const offset = produtosContainer.offsetTop - document.querySelector('header').offsetHeight;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    } else {
+        message.style.display = 'block';
+    }
 }
 
 function renderizarCategoria(nomeCategoria, produtos) {
@@ -72,30 +84,38 @@ function renderizarCategoria(nomeCategoria, produtos) {
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
             <div class="card product-card" style="background-color: #1e1f20;">
-                ${produto.imagem ? `<img src="${produto.imagem}" class="card-img-top" alt="${produto.titulo}">` : ''}
+                <a href="detalhes-produto.html?id=${produto.id}&categoria=${nomeCategoria}">
+                    <img src="${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title" style="color: #ffffff;">${produto.titulo}</h5>
-                    <p class="card-text" style="color: #ffffff;">${produto.descricao}</p>
-                    <p class="card-text" style="color: #ffffff;">Preço: ${produto.preco}</p>
-                </div>
+        <h5 class="card-title" style="color: #1e88e5;">${produto.titulo}</h5>
+        <p class="card-text" style="color: #ffffff;">${produto.descricao}</p>
+        <p class="card-text produto-preco" style="color: #28a745;">${produto.preco}</p>
+    </div>
             </div>
         `;
-
-        if (produto.imagem) {
-            const img = card.querySelector('.card-img-top');
-            img.addEventListener('mouseenter', () => {
-                img.classList.add('img-hovered');
-            });
-            img.addEventListener('mouseleave', () => {
-                img.classList.remove('img-hovered');
-            });
-        }
 
         produtosContainer.appendChild(card);
     });
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.product-card');
+    
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                card.classList.toggle('clicked');
+            });
+        });
+    });
+    
+
     // Adicionar a categoria ao contêiner principal
     container.appendChild(categoriaDiv);
+}
+
+function formatarNomeCamelCase(nome) {
+    return nome.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/^./, function(str){ return str.toUpperCase(); });
 }
 
 // Função para alternar a visibilidade do menu lateral
@@ -120,4 +140,17 @@ document.querySelector('.close-icon').addEventListener('click', function() {
     const menu = document.getElementById('menu');
     menu.classList.remove('open');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Seletor para o botão Compre Agora
+    const btnComprar = document.querySelector('.btn-comprar');
+
+    // Evento de clique no botão Compre Agora
+    btnComprar.addEventListener('click', function () {
+        // Aqui você pode redirecionar o usuário para a página de carrinho de compras
+        window.location.href = 'carrinho.html'; // Substitua 'carrinho.html' pelo URL da sua página de carrinho
+    });
+});
+
+
 
