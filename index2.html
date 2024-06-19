@@ -1,11 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hermes - Preço Imbatível, Entrega Veloz.</title>
+    <link rel="stylesheet" href="detalhes-produto.css">
+    <script src="produtos.js"></script>
+    <script src="program.js"></script>
+  
+    <link rel="shortcut icon" href="assents/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+<header>
+    <div class="top-bar">
+        <img src="assents/menu-icon.png" alt="Ícone do menu" class="menu-icon" onclick="toggleMenu()">
+        <a href="index.html" class="logo">Hermes</a>
+        <div class="icons">
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/user-icon.png" alt="Ícone de usuário">
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/favorite-icon.png" alt="Ícone de item favorito">
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="assents/cart-icon.png" alt="Ícone de carrinho de compras">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="input-container">
+        <img src="assents/search-icon.png" width="20px" class="search-icon" alt="Ícone de pesquisa (lupa)">
+        <input type="text" id="search-input" placeholder="Digite o que você procura...">
+    </div>
+</header>
+
+<nav>
+    <ul class="menu" id="menu">
+        <li><img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()"></li>
+        <li><h1> <b>Hermes</b></h1></li>
+        <li><p>Categorias</p></li>
+      
+       
+        <li class="menu-item"><a href="#monitores">Monitores</a></li>
+        <li class="menu-item"><a href="#mouses">Mouses</a></li>
+        <li class="menu-item"><a href="#teclados">Teclados</a></li>
+        <li class="menu-item"><a href="#headsets">Headsets Gamers</a></li>
+        <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
+        <li class="menu-item"><a href="#outros">Outros</a></li>
+        <li><p>Configurações</p></li>
+        <li class="menu-item"><a href="#">Minha conta</a></li>
+        <li class="menu-item"><a href="#">Quem Somos</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="produto-details">
+        <div class="produto-image">
+            <img class="produto-imagem" src="" alt="Nome do Produto">
+        </div>
+        <div class="produto-info">
+            <h1 class="produto-nome produto-title"></h1>
+            <p class="produto-descricao produto-description"></p>
+            <p class="produto-marca produto-detail"><strong>Marca:</strong> <span class="marca"></span></p>
+            <p class="produto-disponibilidade produto-detail"><strong>Disponibilidade:</strong> <span class="disponibilidade"></span></p>
+            <p class="produto-preco produto-detail"><strong>Preço:</strong> <span class="preco"></span></p>
+            <p class="produto-garantia produto-detail"><strong>Garantia:</strong> <span class="garantia"></span></p>
+            <h2>Especificações Gerais</h2>
+            <ul class="produto-especificacoesGerais produto-detail">
+                <!-- Os itens serão adicionados dinamicamente via JavaScript -->
+            </ul>
+            <h2>Especificações do Produto</h2>
+            <ul class="produto-especificacoesProduto produto-detail">
+                <!-- Os itens serão adicionados dinamicamente via JavaScript -->
+
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+    </section>
+</main>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="informacoesempresa">
+                        <h4>Hermes</h4>
+                    </div>
+                    <p>Site de Periféricos Hermes</p>
+                    <p>Rua dos Periféricos, 123</p>
+                    <p>Betim, MG, Brasil</p>
+                    <p>Telefone: (31) 1234-5678</p>
+                    <p>Email: contato@hermes.com.br</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Redes Sociais</h4>
+                    <p>Siga-nos nas redes sociais:</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Facebook</a></li>
+                        <li class="list-inline-item"><a href="#">Instagram</a></li>
+                        <li class="list-inline-item"><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="footer-address">Endereço: Betim, MG - Brasil</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Função para obter o valor de um parâmetro de URL
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+    
+            // Obter o ID e a categoria do produto da URL
+            const produtoId = parseInt(getQueryParam('id'));
+            const categoria = getQueryParam('categoria');
+    
+            if (!produtoId || !categoria) {
+                console.error('ID do produto ou categoria não encontrados na URL');
+                return;
+            }
+    
+            // Função para encontrar o produto pelo ID e categoria
+            function encontrarProdutoPorId(id, categoria) {
+                const produtos = produtosPorCategoria[categoria];
+                return produtos.find(produto => produto.id === id);
+            }
+    
+            const produto = encontrarProdutoPorId(produtoId, categoria);
+    
+            if (!produto) {
+                console.error('Produto não encontrado');
+                return;
+            }
+    
+            // Atualizar a página com os detalhes do produto
+            document.querySelector('.produto-imagem').src = produto.imagem;
+            document.querySelector('.produto-imagem').alt = produto.titulo;
+            document.querySelector('.produto-nome').textContent = produto.titulo;
+            document.querySelector('.produto-descricao').textContent = produto.descricao;
+            document.querySelector('.produto-marca .marca').textContent = produto.marca;
+            document.querySelector('.produto-disponibilidade .disponibilidade').textContent = produto.disponibilidade;
+            document.querySelector('.produto-preco .preco').textContent = produto.preco;
+            document.querySelector('.produto-garantia .garantia').textContent = produto.garantia;
+    
+            // Adicionar especificações gerais
+            const especificacoesGeraisList = document.querySelector('.produto-especificacoesGerais');
+            produto.especificacoesGerais.forEach(especificacao => {
+                const li = document.createElement('li');
+                li.textContent = especificacao;
+                especificacoesGeraisList.appendChild(li);
+            });
+    
+            // Adicionar especificações do produto
+            const especificacoesProdutoList = document.querySelector('.produto-especificacoesProduto');
+            produto.especificacoesProduto.forEach(especificacao => {
+                const li = document.createElement('li');
+                li.textContent = especificacao;
+                especificacoesProdutoList.appendChild(li);
+            });
+        });
+    </script>
+    
+
 </body>
 </html>
