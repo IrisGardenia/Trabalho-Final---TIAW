@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -12,17 +13,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="produtos.js"></script>
     <script src="program.js"></script>
+  
 </head>
 <body>
-
 <header>
     <div class="top-bar">
         <img src="assents/menu-icon.png" alt="Ícone do menu" class="menu-icon" onclick="toggleMenu()">
         <a href="index.html" class="logo">Hermes</a>
         <div class="icons">
             <div class="icon-container">
-                <a href="index.html">
-                    <a href="telaLogin.html"><img src="assents/user-icon.png" alt="Ícone de usuário"></a>
+                <a href="telaLoguin.html">
+                    <img src="assents/user-icon.png" alt="Ícone de usuário">
                 </a>
             </div>
             <div class="icon-container">
@@ -35,56 +36,47 @@
                     <img src="assents/cart-icon.png" alt="Ícone de carrinho de compras">
                 </a>
             </div>
+        </div> </div>
+        <div class="input-container">
+            <img src="assents/search-icon.png" class="search-icon" alt="Ícone de pesquisa (lupa)">
+            <input type="text" id="search-input" placeholder="Digite o que você procura...">
         </div>
     </div>
-    <div class="input-container">
-        <img src="assents/search-icon.png" width="20px" class="search-icon" alt="Ícone de pesquisa (lupa)">
-        <input type="text" id="search-input" placeholder="Digite o que você procura...">
-    </div>
 </header>
-
 <nav>
     <ul class="menu" id="menu">
         <li><img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()"></li>
         <li><h1> <b>Hermes</b></h1></li>
         <li><p>Categorias</p></li>
-      
-       
         <li class="menu-item"><a href="#monitores">Monitores</a></li>
-        <li class="menu-item"><a href="#mouses">Mouses</a></li>
-        <li class="menu-item"><a href="#teclados">Teclados</a></li>
-        <li class="menu-item"><a href="#headsets">Headsets Gamers</a></li>
-        <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
-        <li class="menu-item"><a href="#outros">Outros</a></li>
-        <li><p>Configurações</p></li>
-        <li class="menu-item"><a href="profile.html">Minha conta</a></li>
-        <li class="menu-item"><a href="#">Quem Somos</a></li>
-    </ul>
+    <li class="menu-item"><a href="#mouses">Mouses</a></li>
+    <li class="menu-item"><a href="#teclados">Teclados</a></li>
+    <li class="menu-item"><a href="#headsets">Headsets Gamers</a></li>
+    <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
+    <li class="menu-item"><a href="#outros">Outros</a></li>
+    <li><p>Configurações</p></li>
+    <li class="menu-item"><a href="profile.html">Minha conta</a></li>
+    <li class="menu-item"><a href="#">Quem Somos</a></li>
+</ul>
 </nav>
-
 <nav>
     <a href="#">
         <div class="card-one">
-           <img src="assents/hbanner01.png" width="100%" alt="Logo do site: ilustração de Hermes ">
+            <img src="assents/banner.png" width="100%" alt="Logo do site: ilustração de Hermes ">
         </div>
     </a>
 </nav>
 
 <div class="container mt-5">
     <div id="categorias-container" class="row">
-        <!-- Suas categorias aqui -->
-        <div id="produtos-container" class="row"></div>
-    </div>
-</div>
-       
-    </div>
-
-    <div id="produtos-container" class="row">
-        <!-- Aqui serão exibidos os produtos -->
+        <!-- Aqui serão renderizadas as categorias e produtos -->
     </div>
 </div>
 
-
+</div>
+<div id="message" style="display: none; color: rgb(247, 5, 5); width: 100%; text-align: center; margin-top: 20px;">
+    Hmmm, não foi possível encontrar esse produto. Informe o nome do produto novamente.
+</div>
 <footer>
     <div class="container">
         <div class="row">
@@ -115,3 +107,5 @@
         </div>
     </div>
 </footer>
+</body>
+</html>
