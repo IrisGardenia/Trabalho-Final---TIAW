@@ -152,19 +152,6 @@ header {
     margin: 10px;
 }
 
-.input-container input {
-    width: 100%;
-    height: 45px;
-    background-color: #303030;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    padding: 0 10px 0 40px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
 .input-container img.search-icon {
     position: absolute;
     left: 12px;
@@ -183,10 +170,6 @@ header {
     opacity: 0.7;
 }
 
-.card-one {
-    margin-top: 135px;
-    margin-bottom: 20px;
-}
 
 .footer-address {
     font-style: italic;
@@ -404,6 +387,7 @@ header {
 }
 
 .input-container input {
+    
     width: 100%;
     height: 45px;
     background-color: #303030;
@@ -529,7 +513,7 @@ header {
 }
 
 .card-one {
-    margin-top: 135px;
+    margin-top: 155px;
     margin-bottom: 20px;
 }
 
@@ -590,7 +574,7 @@ footer .informacoesempresa h4 {
 }
 
 footer {
-    background-color: #1e1f20;
+    background-color: #151515;
     color: white;
     padding: 30px 0;
     text-align: center;
@@ -670,9 +654,7 @@ body {
     justify-content: space-around;
 }
 
-.product-card {
-    margin: 10px 0;
-}
+
 
 #headset {
     position: relative;
@@ -684,10 +666,6 @@ body {
 
 .card-img-top {
     transition: all 0.4s ease-in-out;
-}
-
-.card-img-top.img-hovered {
-    padding: 10px; 
 }
 
 h4 {
@@ -734,9 +712,6 @@ h4 {
     transition: all 0.4s ease-in-out;
 }
 
-.card-img-top.img-hovered {
-    padding: 10px; /* Ajuste o valor do padding conforme necessário */
-}
 
 h4 {
     font-size: 50px; /* Ajuste o tamanho conforme necessário */
@@ -772,9 +747,6 @@ h4 {
     justify-content: space-around;
 }
 
-.product-card {
-    margin: 10px 0;
-}
 
 #headset {
     position: relative;
@@ -862,7 +834,7 @@ h4 {
 
 
 .categoria h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .categoria {
@@ -873,10 +845,91 @@ h4 {
 
 .categoria h4  {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem; 
+    font-size: 16px; 
     font-weight: bold; 
     color: #333; 
     text-transform: capitalize; 
 }
 
+#message {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa para ficar no centro da página */
+    margin-top: 80%; 
+    left: 50%; /* Alinha ao centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o elemento */
+    background-color:#1e1f20; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+    font-family: Verdana, Arial, sans-serif; /* Fonte Verdana */
+    font-weight: bold; /* Texto em negrito */
+    color: #ed0303 !important; /* Cor do texto azul */
+    text-align: center; /* Alinhamento central do texto */
+    max-width: 80%; /* Largura máxima */
+    z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
+}
+
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container {
+    margin-right: 10px; /* Espaçamento entre os ícones */
+}
+
+/**/
+.product-card {
+    background-color: #1e1f20;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.product-card .card-img-top {
+    max-width: 100%; /* Define a largura máxima para a imagem */
+    height: auto; /* Altura ajustável para manter a proporção original */
+    display: block; /* Garante que a imagem se comporte corretamente */
+    border-radius: 8px 8px 0 0; /* Adiciona um arredondamento nos cantos superiores */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.categoria h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px; /* Tamanho da fonte desejado */
+    font-weight: bold; /* Peso da fonte, se necessário */
+    margin-bottom: 10px; /* Espaçamento opcional abaixo do título */
+    color: #333; /* Cor do texto */
+}
+
+.produto-preco {
+    font-weight: bold;
+    font-size: 20px; 
+   
+}
 
