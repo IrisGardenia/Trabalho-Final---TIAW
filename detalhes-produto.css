@@ -689,8 +689,18 @@ ul li {
 }
 
 .btn-comprar:hover {
-  
     background-color: #218838;
+}
+
+.comprar {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.comprar:hover {
+    text-decoration: none;
+    color: white;
 }
 
 /* Media query para ajuste em telas maiores que 677px */
@@ -729,5 +739,4 @@ ul li {
 .produto-preco .preco {
     color: #28a745; /* Cor verde para o preço */
 }
-
 
