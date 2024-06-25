@@ -37,11 +37,12 @@ header {
     height: 100vh;
     background-color: #1e1f20;
     overflow-y: auto;
-    transition: left 0.3s;
+    transition: left 0.3s ease!important;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 1001;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.6);
 }
 
 .menu.open {
@@ -131,13 +132,10 @@ header {
     width: 50px;
     border-radius: 50%;
     transition: background-color 0.3s;
-    margin-right: 20px;
+   
 }
 
-.icon-container:hover {
-  
-    background-color: #424242;
-}
+
 
 .logo:hover {
     color: #ffffff;
@@ -170,10 +168,110 @@ header {
     opacity: 0.7;
 }
 
+footer {
+    text-align: center;
+    background-color: #151515;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.informacoesempresa,
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 10px; 
+    width: 60%;
+    max-width: 700px; 
+}
+
+.informacoesempresa h4,
+.footer-social h4 {
+  
+    margin: 10px 0;
+}
+
+.footer-social ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social ul li {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (min-width: 800px) {
+    .footer-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .informacoesempresa {
+        margin-right: 20px;
+        flex: 0 0 auto;
+    }
+
+
+    .footer-logo {
+        margin: 0;
+        width: auto;
+        max-width: 320px; 
+    }
+}   
+
+.empresa-detalhes h4 {
+    
+    font-size: 46px!important;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.empresa-detalhes p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+   
+
 
 .footer-address {
+    font-size: 17px;
     font-style: italic;
     margin-top: 10px;
+    text-align: center; /* Mantém o endereço centralizado */
+}
+
+
+
+
+.footer-social a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
 }
 
 .footer-links a {
@@ -184,6 +282,7 @@ header {
 .footer-links a:hover {
     text-decoration: underline;
 }
+
 
 .container {
     margin-top: 80px; 
@@ -348,36 +447,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -12px;
-    margin-right: 20px;
+   
+    
     height: 50px; 
     width: 50px; 
     border-radius: 50%;
     transition: background-color 0.3s;
 }
 
-.icon-container:hover {
-   margin-top: -10px;
-    
-    padding: 1px;
-}
 
 .icons img {
     margin-top: -1px!important;
-    padding: 2px;
+    margin-left: 32px;
     text-decoration: none;
     margin-top: 12px;
-    width: 40px;
+    width: 30px;
 }
-
-.img1:hover img{
-    padding: 10px;
-   
-   }
-   
-   .img1 img {
-    padding: 5px;
-   }
 
 .input-container {
     margin-left: 10px;
@@ -418,21 +503,6 @@ header {
     opacity: 0.7;
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: #1e1f20;
-    overflow-y: auto;
-    transition: left 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 1001;
-    margin-top: 0;
-}
 
 .menu h1 {
    margin-top: 10px;
@@ -514,7 +584,7 @@ header {
 
 .card-one {
     margin-top: 155px;
-    margin-bottom: 20px;
+    margin-bottom: -30px;
 }
 
 .card {
@@ -566,32 +636,11 @@ header {
 
 footer .informacoesempresa h4 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 #product-list {
     padding: 0 15px;
-}
-
-footer {
-    background-color: #151515;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.footer-address {
-    font-style: italic;
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
 }
 
 body {
@@ -852,8 +901,6 @@ h4 {
 }
 
 
-
-
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -871,7 +918,7 @@ h4 {
 
 /**/
 .product-card {
-    background-color: #1e1f20;
+    background-color: #1682ed;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -919,6 +966,7 @@ h4 {
 
 
 #message {
+
     text-align: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    background-color: #303030;
@@ -927,4 +975,494 @@ h4 {
  border-radius: 6px;
  border: none;
 
+}
+
+
+
+.cart img {
+    margin-top: 0px!important;
+    margin-right: 10px;
+    margin-left: 15px ;
+}
+
+  
+
+
+ .icons {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.icons img {
+    margin-top: -1px!important;
+margin-left: 10px;
+    text-decoration: none;
+    margin-top: 12px;
+    width: 30px;
+}
+
+
+.adicionarCarrinhoButton {
+    position: fixed; /* Posicionamento fixo em relação à janela de visualização */
+    top: 50%; /* Posiciona o topo da mensagem no meio da tela */
+    left: 50%; /* Posiciona a esquerda da mensagem no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    z-index: 1000; /* Garante que a mensagem esteja acima de outros elementos */
+    background-color: #28a745; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar a mensagem */
+}
+
+
+    
+#cart-count {
+   padding-left: 1px!important;
+    position: absolute;
+    width: 25px;
+    height: 25px; /* Adicionando altura para garantir que seja um círculo perfeito */
+    display: flex;
+    justify-content: center; /* Centralizando o texto horizontalmente */
+    align-items: center; /* Centralizando o texto verticalmente */
+    border-radius: 50%;
+    background-color: #218838;
+    margin-top: -15px;
+    margin-left: 27px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    pointer-events: none; /* Faz com que o contador não capture eventos de clique */
+}
+
+
+.icon-container {
+  
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Adicionado cursor pointer */
+}
+
+.cart-dropdown {
+    display: none; /* Esconde o dropdown por padrão */
+    position: fixed; /* Fixo para ocupar uma parte da tela */
+    top: 0;
+    right: 0;
+    width: 30%; /* Ocupa 30% da largura da tela */
+    height: 100%; /* Ocupa 100% da altura */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    z-index: 1000; /* Alta prioridade no z-index */
+    overflow-y: auto; /* Permite rolagem vertical */
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateX(100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+.cart-dropdown.open {
+    display: block; /* Mostra o dropdown */
+    transform: translateX(0); /* Move o dropdown para dentro da tela */
+}
+
+
+.produto-preco {
+    font-size: 24px; /* Tamanho da fonte aumentado */
+}
+
+.produto-preco .preco {
+    color: #28a745; /* Cor verde para o preço */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+
+.button-container button {
+    flex: 1; /* Permite que os botões cresçam igualmente */
+    max-width: 200px; /* Limita a largura máxima dos botões */
+    min-width: 150px; /* Define a largura mínima dos botões */
+    text-align: center; /* Centraliza o texto dos botões */
+    box-sizing: border-box; /* Inclui padding e border na largura total dos botões */
+}
+
+#adicionar-carrinho, #comprar {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #218838;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-bottom: 9px;
+}
+
+#adicionar-carrinho:hover, #comprar:hover {
+    background-color: #28a745;
+}
+
+#adicionar-carrinho:active, #comprar:active {
+    transform: scale(1.1);
+}
+
+#comprar {
+    padding: 5px 122px;
+}
+
+
+#adicionar-carrinho {
+    margin-left: 10px;
+    padding: 5px 95px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+   
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito hover para a imagem do ícone */
+.icon-container img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    transform-origin: center;
+}
+
+ .icons {
+    display: flex;
+    align-items: center;
+}
+
+
+.icons img {
+    margin-top: -1px!important;
+margin-left: 10px;
+    text-decoration: none;
+    margin-top: 12px;
+    width: 30px;
+}
+
+
+.mensagem-adicao {
+    position: fixed; /* Posicionamento fixo em relação à janela de visualização */
+    top: 50%; /* Posiciona o topo da mensagem no meio da tela */
+    left: 50%; /* Posiciona a esquerda da mensagem no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    z-index: 1000; /* Garante que a mensagem esteja acima de outros elementos */
+    background-color: #28a745; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar a mensagem */
+}
+
+#cart-count {
+    position: absolute;
+    width: 25px;
+    display: flex;
+    border-radius: 50%;
+    padding-left: 7px;
+    background-color: #218838;
+    margin-top: -15px;
+    margin-left: 27px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer; /* Adicionado cursor pointer */
+}
+
+
+
+.cart-container {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.cart-sidebar {
+    color: #f4f4f4;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Posição inicial fora da tela */
+    width: 300px; /* Largura do menu lateral */
+    height: 100%;
+    background-color: #1e1f20;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: right 0.3s ease; /* Transição para animar a abertura e fechamento */
+    overflow-y: auto;
+}
+
+
+.cart-menu {
+   
+    border: none;
+    color: #f4f4f4;
+    position: fixed;
+    top: 0;
+    right: -408px; /* Posição inicial fora da tela */
+    width: 408px; /* Largura do menu lateral */
+    height: 100%;
+    background-color: #1e1f20;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease; /* Transição para animar a abertura e fechamento */
+    overflow-y: auto;
+}
+
+
+
+.close-cart {
+    padding: 3px !important;
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+    outline: none; /* Remove a borda de foco */
+}
+
+.close-cart:focus {
+    outline: none; /* Remove a borda de foco quando o botão é focado */
+}
+
+.close-cart:active {
+    outline: none; /* Remove a borda de foco quando o botão é clicado */
+}
+
+.close-cart::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent; /* Cor transparente por padrão */
+    transition: background-color 0.3s ease; /* Suave transição para o hover */
+    z-index: -1; /* Coloca o pseudo-element atrás do botão */
+}
+
+.close-cart:hover::after {
+    background-color: #303030; /* Cor do efeito de hover */
+}
+
+
+
+
+
+.cart-menu.open {
+    right: 0; /* Mostra o menu lateral ao lado direito */
+}
+
+.cart-menu-content {
+    padding: 20px;
+}
+
+.cart-item {
+    padding: 25px 10px 2px 10px ;
+    border-radius: 6px;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item-image {
+    width: 100px!important; /* Ajuste conforme necessário */
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn-primary {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #218838!important;
+    color: #ffffff;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.deletar {
+    width: 100%;
+    border: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #424242;
+    color: #ffffff;
+    padding: 5px 30px  ;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none; /* Remove o outline padrão */
+    box-shadow: none; /* Remove o shadow padrão */
+}
+
+.deletar:focus {
+    outline: none;
+   
+}
+
+.btn-remove:focus{
+    outline: none;
+}
+
+.cart-menu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+.cart-menu h4 {
+    font-weight: bold;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.empty-cart-message {
+    display: none;
+    position: fixed;
+    top: 50%; /* Posiciona verticalmente no meio da tela */
+    left: 50%; /* Posiciona horizontalmente no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza exatamente no meio */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999; /* Garante que esteja acima de outros conteúdos */
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.comprar-button {
+ 
+    background-color: #28A745; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+   border-radius: 3px;
+    width: 70px; /* Largura do botão */
+    height: 28px; /* Altura do botão */
+    display: flex; /* Centraliza o conteúdo do botão */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.comprar-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.comprar-button:active {
+    transform: scale(1.2); /* Aumenta o tamanho ao clicar */
+}
+
+
+.btn-remove {
+    margin-top: 6px;
+    background-color: #e90909; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+   border-radius: 3px;
+    width: 70px; /* Largura do botão */
+    height: 28px; /* Altura do botão */
+    display: flex; /* Centraliza o conteúdo do botão */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.btn-remove:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.btn-remove:active {
+    transform: scale(1.2); /* Aumenta o tamanho ao clicar */
+}
+
+.produto-imagem {
+   width: 500px!important;
+
+}
+
+ .icon-container {
+    margin-left: -16px;
+ }
+
+ .icon-container img {
+    margin-top: 8px!important;
+
+ }
+
+ 
+ .deletar {
+   
+    margin-left: 50px;
+    display: block;
+   margin-left: 0px;
+    background-color: #424242;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px;
+    width: 35%;
+}
+
+.deletar:hover {
+    background-color: #404040;
 }
