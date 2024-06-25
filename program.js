@@ -84,18 +84,18 @@ function renderizarCategoria(nomeCategoria, produtos) {
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
-            <div class="card product-card" style="background-color: #303030;">
-                <a href="detalhes-produto.html?id=${produto.id}&categoria=${nomeCategoria}">
+            <a href="detalhes-produto.html?id=${produto.id}&categoria=${nomeCategoria}" class="card-link">
+                <div class="card product-card" style="background-color: #303030;">
                     <img src="${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
-                </a>
-                <div class="card-body">
-        <h5 class="card-title" style="color: #1e88e5;">${produto.titulo}</h5>
-        <p class="card-text" style="color: #ffffff;">${produto.descricao}</p>
-        <p class="card-text produto-preco" style="color: #28a745;">${produto.preco}</p>
-    </div>
-            </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #1e88e5;">${produto.titulo}</h5>
+                        <p class="card-text" style="color: #ffffff;">${produto.descricao}</p>
+                        <p class="card-text produto-preco" style="color: #28a745;">${produto.preco}</p>
+                    </div>
+                </div>
+            </a>
         `;
-
+    
         produtosContainer.appendChild(card);
     });
 
@@ -142,16 +142,13 @@ document.querySelector('.close-icon').addEventListener('click', function() {
     menu.classList.remove('open');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Seletor para o botão Compre Agora
-    const btnComprar = document.querySelector('.btn-comprar');
 
-    // Evento de clique no botão Compre Agora
-    btnComprar.addEventListener('click', function () {
-        // Aqui você pode redirecionar o usuário para a página de carrinho de compras
-        window.location.href = 'carrinho.html'; // Substitua 'carrinho.html' pelo URL da sua página de carrinho
-    });
-});
+// program.js
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
+}
 
 
 
