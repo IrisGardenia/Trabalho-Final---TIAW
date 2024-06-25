@@ -5,125 +5,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forma de Pagamento</title>
     <link rel="stylesheet" href="telaPag.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="detalhes-produto.css">
+    <link rel="shortcut icon" href="assents/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="produtos.js"></script>
+    <script src="program.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Forma de Pagamento</h2>
-        <form id="paymentForm">
-            <h4>Conta</h4>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Nome completo" required class="name">
-                    <i class="fa fa-user icon"></i>
+    <header>
+        <div class="top-bar">
+            <img src="assents/menu-icon.png" alt="Ícone do menu" class="menu-icon" onclick="toggleMenu()">
+            <a href="index.html" class="logo">Hermes</a>
+            <div class="icons">
+                
+                    <a href="#">
+                        
+                    </a>
+                </div> </div></div>
+               
+
+    
+    
+    <nav>
+        <ul class="menu" id="menu">
+            <li>
+                <img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()">
+            </li>
+            <h1><b>Hermes</b></h1>
+           
+            <li><p>Configurações</p></li>
+            <li class="menu-item"><a href="#">Minha conta</a></li>
+            <li class="menu-item"><a href="sobre-nos.html">Quem Somos</a></li>
+            <li class="menu-item"><a href="index.html">Voltar</a></li>
+        </ul>
+    </nav>
+
+    </header>
+   
+        <div class="wrapper">
+            <h2>Detalhes da Compra</h2>
+    
+            <div class="produto-container">
+                <img src="" alt="Imagem do Produto" class="produto-imagem">
+                <div class="produto-info">
+                    <h3 class="produto-nome"></h3>
+                   
+                    <p class="produto-preco"></p>
+        
+            </div></div>
+        
+            <form id="paymentForm">
+               <h4>Conta</h4>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="text" placeholder="Nome completo" required class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                    
                 </div>
-                <div class="input_box">
-                    <input type="text" placeholder="Nome no cartão" required class="name">
-                    <i class="fa fa-user icon"></i>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="email" placeholder="Endereço de email" required class="name">
+                        <i class="fa fa-envelope icon"></i>
+                    </div>
                 </div>
+              
+                <h4>Endereço de Envio</h4>
+                <div class="input_group">
+                    <div class="row">
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="cep" placeholder="CEP" required>
+                                <i class="fa fa-map-marker icon"></i>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="estado" placeholder="Estado" required>
+                                <i class="fa fa-institution icon"></i>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="cidade" placeholder="Cidade" required>
+                                <i class="fa fa-institution icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="bairro" placeholder="Bairro" required>
+                                <i class="fa fa-map-marker icon"></i>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="logradouro" placeholder="Rua/Avenida" required>
+                                <i class="fa fa-map-marker icon"></i>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="input_box">
+                                <input type="text" id="numerocasa1" placeholder="Número da casa" required>
+                                <i class="fa fa-home icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+          
+                <h4>Forma de Entrega</h4>
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="radio" id="entrega_correios" name="forma_entrega" class="radio" checked>
+                        <label for="entrega_correios">Via Correios</label>
+                    </div>
+                    <div class="input_box">
+                        <input type="radio" id="entrega_transportadora" name="forma_entrega" class="radio">
+                        <label for="entrega_transportadora">Via Transportadora Hermes</label>
+                    </div>
+                </div>
+                
+             
+                
+                <h4>Detalhes do Pagamento</h4>
+    
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="text" id="cardName" placeholder="Nome no cartão" required class="name">
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="tel" id="cardNumber" placeholder="Número do cartão" required>
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="tel" id="cvc" placeholder="CVC" required>
+                        <i class="fa fa-lock icon"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="number" id="expMonth" placeholder="Mês de expiração" required>
+                        <i class="fa fa-calendar icon"></i>
+                    </div>
+                </div>
+                
+                <div class="input_group">
+                    <div class="input_box">
+                        <input type="number" id="expYear" placeholder="Ano de expiração" required>
+                        <i class="fa fa-calendar-o icon"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="number" id="amount" placeholder="Confirme o valor" required>
+                        <i class="fa fa-money icon"></i>
+                    </div>
+                </div>
+                
+                <div class="input_group">
+                    <div class="input_box">
+                        <button type="submit">Confirmar Compra</button>
+                    </div>
+                </div>
+                <div id="errorMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">
+                    Preencha todos os campos para finalizar o pagamento!
+                </div>
+    
             </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="email" placeholder="Endereço de email" required class="name">
-                    <i class="fa fa-envelope icon"></i>
-                </div>
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                <p><span id="clientName"></span>, a Hermes agradece a sua compra do <span id="productName"></span>!</p>
+                <p>Aguarde, a qualquer momento atualizaremos as informações do seu pedido.</p>
             </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Endereço" required class="name">
-                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
-                </div>
+            </form>
+        </div>
+    
+
+  
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="informacoesempresa">
+                <img src="assents/hermes1.png" alt="Logo Hermes" class="footer-logo">
             </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Cidade" required class="name">
-                    <i class="fa fa-institution icon"></i>
-                </div>
+            <div class="empresa-detalhes">
+                <h4>Hermes</h4>
+                <p>Site de Periféricos Hermes</p>
+                <p>Rua dos Periféricos, 123</p>
+                <p>Betim, MG, Brasil</p>
+                <p>Telefone: (31) 1234-5678</p>
+                <p>Email: contato@hermes.com.br</p>
             </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <h4>Data de nascimento</h4>
-                    <input type="text" placeholder="DD" required class="dob">
-                    <input type="text" placeholder="MM" required class="dob">
-                    <input type="text" placeholder="YYYY" required class="dob">
-                </div>
-                <div class="input_box">
-                    <h4>Gênero</h4>
-                    <input type="radio" name="genero" id="b1" checked class="radio">
-                    <label for="b1">Masculino</label>
-                    <input type="radio" name="genero" id="b2" class="radio">
-                    <label for="b2">Feminino</label>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <h4>Detalhes do Pagamento</h4>
-                    <input type="radio" name="pay" class="radio" id="bc1" checked>
-                    <label for="bc1"><span>
-                        <i class="fa fa-cc-visa"></i> Cartão de crédito
-                    </span></label>
-                    <input type="radio" name="pay" class="radio" id="bc2">
-                    <label for="bc2"><span>
-                        <i class="fa fa-cc-paypal"></i> Paypal
-                    </span></label>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="tel" class="name" placeholder="Número do cartão" required>
-                    <i class="fa fa-credit-card icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="tel" class="name" placeholder="CVC" required>
-                    <i class="fa fa-user icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="number" class="name" placeholder="Mês de expiração" required>
-                    <i class="fa fa-calendar icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="number" class="name" placeholder="Ano de expiração" required>
-                    <i class="fa fa-calendar-o icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="number" class="name" placeholder="Insira o valor" required>
-                    <i class="fa fa-money icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <button>Pagar</button>
-                </div>
-            </div>
-            <div id="errorMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">
-                Preencha todos os campos para finalizar o pagamento!
-            </div>
-        </form>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="footer-address">Endereço: Betim, MG - Brasil</p>
+           
+        </div>
     </div>
+    </div>
+    </footer>
+
     <script>
-        document.getElementById('paymentForm').addEventListener('submit', function(event) {
-            var inputs = document.querySelectorAll('#paymentForm input[required]');
-            var allFilled = true;
-            
-            inputs.forEach(function(input) {
-                if (!input.value) {
-                    allFilled = false;
-                }
-            });
-            
-            if (!allFilled) {
-                event.preventDefault();
-                document.getElementById('errorMessage').style.display = 'block';
+  
+
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    const produtoCompra = JSON.parse(sessionStorage.getItem('produtoCompra'));
+    const produtoCarrinho = JSON.parse(sessionStorage.getItem('produtoCarrinho'));
+
+    if (produtoCompra) {
+        atualizarDetalhesProduto(produtoCompra);
+    } else if (produtoCarrinho) {
+        atualizarDetalhesProduto(produtoCarrinho);
+    } else {
+        window.location.href = 'detalhes-produto.html';
+    }
+
+    document.getElementById('paymentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const clientName = document.querySelector('#paymentForm .name').value.trim();
+        const inputs = document.querySelectorAll('#paymentForm input[required]');
+        let allFilled = true;
+
+        inputs.forEach(function(input) {
+            if (!input.value) {
+                allFilled = false;
             }
         });
+
+        if (allFilled && clientName) {
+            document.getElementById('clientName').textContent = clientName;
+            document.getElementById('productName').textContent = produtoCompra ? produtoCompra.nome || produtoCompra.titulo : produtoCarrinho.nome || produtoCarrinho.titulo;
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+
+            setTimeout(function() {
+                window.location.href = 'envio.html';
+            }, 5000);
+        } else {
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('thankYouMessage').style.display = 'none';
+        }
+    });
+
+    // Botão de Comprar do Carrinho no Menu
+    const comprarButton = document.getElementById('comprar-carrinho');
+    if (comprarButton) {
+        comprarButton.addEventListener('click', function() {
+            const produtoCarrinho = JSON.parse(sessionStorage.getItem('produtoCarrinho'));
+
+            if (produtoCarrinho) {
+                sessionStorage.setItem('produtoCompra', JSON.stringify(produtoCarrinho));
+                window.location.href = 'telaPag.html';
+            } else {
+                console.error('Produto não encontrado no carrinho');
+            }
+        });
+    }
+});
+
+function atualizarDetalhesProduto(produto) {
+    document.querySelector('.produto-imagem').src = produto.imagem;
+    document.querySelector('.produto-nome').textContent = produto.nome || produto.titulo;
+    document.querySelector('.produto-preco').textContent = produto.preco;
+}
+
+function comprarProdutoDoCarrinhoPrincipal(idProduto) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const produto = carrinho.find(item => item.id === idProduto);
+
+    if (produto) {
+        sessionStorage.setItem('produtoCompra', JSON.stringify(produto));
+        window.location.href = 'telaPag.html';
+    } else {
+        console.error('Produto não encontrado no carrinho');
+    }
+}
+
+
+//fim 
+  
+
+           
+            // Busca CEP
+            document.querySelector('#cep').addEventListener('blur', function () {
+                var cep = this.value.replace(/\D/g, '');
+                if (cep.length === 8) {
+                    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!data.erro) {
+                                document.querySelector('#logradouro').value = data.logradouro;
+                                document.querySelector('#bairro').value = data.bairro;
+                                document.querySelector('#cidade').value = data.localidade;
+                                document.querySelector('#estado').value = data.uf;
+                            } else {
+                                alert('CEP não encontrado.');
+                            }
+                        });
+                }
+            });
+
+            // Formatação do número do cartão
+            document.querySelector('#cardNumber').addEventListener('input', function (e) {
+                e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(\d{4})(?=\d)/g, '$1 ');
+            });
+       
+
+   
     </script>
 </body>
 </html>
