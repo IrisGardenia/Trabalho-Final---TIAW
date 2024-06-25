@@ -10,7 +10,9 @@ body {
     color: black;
 }
 
-
+#menu {
+    padding-left: 50px;
+}
 
 .wrapper {
     margin-top: 100px!important;
@@ -200,14 +202,31 @@ footer .informacoesempresa h4 {
 }
 
 footer {
+    border-radius: 6px;
+    width: 100%;
     background-color: #151515;
     color: white;
     padding: 30px 0;
     text-align: center;
+    position: relative;
 }
 
 
- 
+.footer-container {
+    width: 100%!important;
+  
+  
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .footer-address {
     font-style: italic;
@@ -254,6 +273,7 @@ footer {
  }  
     
 
+
 .input_box #cardName,
 .input_box #cardNumber,
 .input_box #cvc,
@@ -288,8 +308,91 @@ footer {
     text-align: center;
 }
 
-header .menu {
-    padding-left: 50px;
+@media (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+        padding: 15px;
+        margin: 15px auto 0;
+    }
+
+    .wrapper h2 {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .wrapper h4 {
+        font-size: 22px;
+    }
+
+    .input_group {
+        flex-direction: column;
+    }
+
+    .input_box {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .input_box input, .input_box button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-container {
+        width: 90%;
+    }
+
+    footer .empresa-detalhes {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    footer .informacoesempresa img {
+        margin-top: -70px;
+        width: 200px;
+    }
+
+    footer .footer-address {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+/* Consultas de mídia para telas maiores */
+@media (min-width: 600px) {
+    .wrapper {
+        width: 500px;
+    }
+
+    footer .footer-container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    footer .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .empresa-detalhes {
+        margin-top: -50px;
+        text-align: left;
+    }
+
+    footer .informacoesempresa img {
+        width: 180px;
+    }
+
+    footer .footer-address {
+        text-align: right;
+        margin-top: 0;
+    }
+
 }
 
 header .menu a {
