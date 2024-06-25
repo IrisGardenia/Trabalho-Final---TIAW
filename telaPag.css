@@ -10,27 +10,37 @@ body {
     color: black;
 }
 
+
+
 .wrapper {
-    background-color: white;
+    margin-top: 100px!important;
+    margin-bottom: 25px!important;
+    background-color: #303030;
     width: 500px;
     padding: 25px;
     margin: 25px auto 0;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.500);
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .wrapper h2 {
-    color: blue;
+   
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
     font-size: 24px;
-    padding: 10px;
-    margin-bottom: 8px;
+    padding:10px;
+    margin-bottom: 28px;
     text-align: center;
-    border: 1px dashed blue;
+   background-color: #1682ed;
 }
 
 .wrapper h4 {
+    padding-top: 5px;
+    font-size: 26px;
+    color: #ececec;
+    border-radius: 6px;
     padding-bottom: 5px;
-    color: blue;
+
 }
 
 .input_group {
@@ -44,7 +54,7 @@ body {
 
 .input_box {
     width: 100%;
-    margin-right: 5px;
+    margin-right:5px;
     position: relative;
 }
 
@@ -52,24 +62,16 @@ body {
     margin-right: 0;
 }
 
-.input_box .name {
-    padding: 14px 10px 14px 50px;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #0003;
-    outline: none;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    border-radius: 3px;
-    color: #333;
-}
+
+
 
 .input_box .name:focus, .dob:focus {
-    -webkit-box-shadow: 0 0 2px 1px blue;
-    -moz-box-shadow: 0 0 2px 1px blue;
-    box-shadow: 0 0 2px 1px blue;
-    border: 1px solid blue;
+    -webkit-box-shadow: 0 0 2px 1px #1682ed ;
+    -moz-box-shadow: 0 0 2px 1px #1682ed;
+    box-shadow: 0 0 2px 1px #1682ed;
+    border: 1px solid #1682ed;
 }
+
 
 .input_box .icon {
     width: 48px;
@@ -77,11 +79,11 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
+  
+    top: 50%; /* Centralize verticalmente */
+    transform: translateY(-50%);
     color: #1e1f20;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius: 2px 0 0 2px;
     transition: 0.3s;
     font-size: 20px;
@@ -90,10 +92,10 @@ body {
     border-right: none;
 }
 
-.name:focus+.icon {
-    background-color: blue;
+.name:focus +.icon {
+    background-color: #1682ed;
     color: white;
-    border: 1px solid blue;
+    border: 1px solid #1682ed;
     transition: 0.8s;
 }
 
@@ -101,7 +103,7 @@ body {
     width: 30%;
     padding: 14px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transition: 0.3s;
     outline: none;
     border: 1px solid #c0bfbf;
@@ -112,14 +114,34 @@ body {
     display: none;
 }
 
+.input_box input[type="radio"] {
+    display: none;
+}
+
 .input_box label {
-    width: 50%;
+    width: 100%;
     padding: 13px;
-    background-color: white;
+    background-color: rgb(233, 233, 233);
     display: inline-block;
-    float: left;
     text-align: center;
     border: 1px solid #c0bfbf;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+.input_box label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.radio:checked + label {
+    background-color: #1c9638;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.input_box label:hover {
+    background-color: #ffffff;
 }
 
 .input_box label:first-of-type {
@@ -128,15 +150,17 @@ body {
 }
 
 .radio:checked+label {
-    background-color: blue;
+    background-color: #1682ed;
     color: white;
     transition: 0.5s;
 }
 
 .input_box button {
+    font-size: 20px;
+    font-weight: bold;
     width: 100%;
-    background-color: blue;
-    color: white;
+    background-color: #1682ed;
+    color: rgb(226, 226, 226);
     border: none;
     padding: 15px;
     border-right: 4px;
@@ -147,5 +171,191 @@ body {
 
 .input_box button:hover {
     cursor: pointer;
-    background-color: rgb(6, 6, 102);
+    background-color: #1682ed;
 }
+.input_box .name {
+    color: #151515;
+    padding: 14px 10px 14px 50px;  /* Adicionei padding à esquerda */
+    width: 100%;
+    background-color: white;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+
+.menu-item a:hover {
+text-decoration: none!important;
+}
+
+footer .informacoesempresa h4 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#product-list {
+    padding: 0 15px;
+}
+
+footer {
+    background-color: #151515;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+ 
+
+.footer-address {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.input_box #numerocasa1{
+    margin-bottom: 12px;
+}
+
+.input_box #numerocasa1{
+    margin-top: 10px;
+}
+
+.input_box #cep,
+.input_box #numerocasa1,
+.input_box #logradouro,
+.input_box #bairro,
+.input_box #cidade,
+.input_box #estado {
+    padding-left: 50px!important;
+    width: 220px;
+}
+
+ #numerocasa  {
+    color: rgb(255, 255, 255);
+       margin-bottom: 10px; }
+
+ #bairro   {
+    margin-bottom: 10px;
+ }  
+
+ #bairro .icons   {
+    margin-top: 10px!important;
+ }  
+    
+
+.input_box #cardName,
+.input_box #cardNumber,
+.input_box #cvc,
+.input_box #expMonth,
+.input_box #expYear,
+.input_box #amount {
+  
+    padding-left: 50px!important;
+    width: 220px;
+}
+
+
+.input_box #cardName{
+    margin-bottom: -2px!important;
+}
+
+.input_box #cardName{
+   height: 20px;
+   margin-bottom: 10px;
+}
+
+#endereco_outro {
+    margin-top: 10px;
+}
+
+#valor_entrega {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+header .menu {
+    padding-left: 50px;
+}
+
+header .menu a {
+    text-decoration: none;
+}
+
+.input_box #bairro + .icon {
+    position: absolute; /* Define a posição absoluta para o ícone */
+    top: 13px; /* Ajusta a posição vertical do ícone */
+}
+
+
+.input_box #cardName + .icon {
+   
+    position: absolute; /* Define a posição absoluta para o ícone */
+    top: 15px; /* Ajusta a posição vertical do ícone */
+}
+
+.thank-you-message{
+
+position: fixed; /* Posicionamento fixo em relação à janela de visualização */
+    top: 50%; /* Posiciona o topo da mensagem no meio da tela */
+    left: 50%; /* Posiciona a esquerda da mensagem no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    z-index: 1000; /* Garante que a mensagem esteja acima de outros elementos */
+    background-color: #1682ed; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
+   .produto-info h3 {
+   
+    font-size: 22px;
+    color: #ffffff!important;
+   font-weight: bold;
+
+    }
+
+    .produto-preco{
+        padding: 2px;
+       
+        color: #1c9638;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+   
+    .produto-container {
+       margin-top: 8px;
+        border-radius: 6px;
+        background-color: #404040;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      
+        padding: 10px 10px;
+        margin-bottom: 0px;
+    }
+    
+    .produto-imagem {
+        max-width: 150px; 
+        height: auto; 
+        margin-right: 20px;
+        border-radius: 3px;
+    }
+    
