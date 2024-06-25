@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +12,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="produtos.js"></script>
     <script src="program.js"></script>
-  
 </head>
 <body>
 <header>
@@ -22,34 +20,68 @@
         <a href="index.html" class="logo">Hermes</a>
         <div class="icons">
             <div class="icon-container">
-                <a href="telaLogin.html">
+                <a href="telaLoguin.html">
                     <img src="assents/user-icon.png" alt="Ícone de usuário">
                 </a>
             </div>
             <div class="icon-container">
-                <a href="index.html">
+                <a href="#">
                     <img src="assents/favorite-icon.png" alt="Ícone de item favorito">
                 </a>
             </div>
-            <div class="icon-container">
-                <a href="index.html">
-                    <img src="assents/cart-icon.png" alt="Ícone de carrinho de compras">
-                </a>
+            <div class="icon-container cart-container">
+                <img src="assents/cart-icon.png" alt="Ícone de carrinho de compras" onclick="toggleCartMenu()">
+                <span id="cart-count">0</span> <!-- Este número deve ser atualizado com a quantidade de itens no carrinho -->
             </div>
-        </div> </div>
-        <div class="input-container">
-            <img src="assents/search-icon.png" class="search-icon" alt="Ícone de pesquisa (lupa)">
-            <input type="text" id="search-input" placeholder="Digite o que você procura...">
         </div>
-     </div>
-        <p id="message" class="alert alert-warning" style="display: none;">
-            Hmmm... Não há produtos que correspondam à sua busca.
-            <br>Revise a ortografia da palavra.
-            <br>Navegue pelas categorias para encontrar um produto semelhante.
-        </p>
     </div>
+    <div class="input-container">
+        <img src="assents/search-icon.png" width="20px" class="search-icon" alt="Ícone de pesquisa (lupa)">
+        <input type="text" id="search-input" placeholder="Digite o que você procura...">
     </div>
+    <p id="message" class="alert alert-warning" style="display: none;">
+        Hmmm... Não há produtos que correspondam à sua busca.
+        <br>Revise a ortografia da palavra.
+        <br>Navegue pelas categorias para encontrar um produto semelhante.
+    </p>
 </header>
+
+<div class="cart-menu" id="cart-menu">
+    <div class="cart-menu-content">
+        <button class="close-cart" onclick="toggleCartMenu()">
+            <img src="assents/close-icon.png" width="30px" alt="Fechar carrinho">
+        </button>
+       
+        <h4>Carrinho</h4>
+            <button id="clear-cart" class="deletar" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <div id="cart-items">
+                <p id="empty-cart-message" style="display: none;">Hm... Você ainda não adicionou itens ao carrinho... <br> Seu carrinho está vazio!</p>
+                <div id="produto-detalhe">
+                    <h2 id="produto-nome"></h2>
+                    <img id="produto-imagem" src="" alt="">
+                    <p id="produto-descricao"></p>
+                    <p id="produto-preco"></p>
+                    <div class="cart-total">
+                        <strong>Total: </strong><span id="cart-total">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>       
+               
+            </div>
+        
+            <!-- Estrutura do item do carrinho -->
+            
+            <!-- Adicione mais itens conforme necessário -->
+        
+        </div>
+    </div>
+</div>
+
+
+
+
 <nav>
     <ul class="menu" id="menu">
         <li><img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()"></li>
@@ -59,19 +91,19 @@
     <li class="menu-item"><a href="#mouses">Mouses</a></li>
     <li class="menu-item"><a href="#teclados">Teclados</a></li>
     <li class="menu-item"><a href="#headsets">Headsets Gamers</a></li>
-    <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li>
-    <li class="menu-item"><a href="#outros">Outros</a></li>
+    <li class="menu-item"><a href="#notebooks">Notebooks Gamers</a></li> <br>
+   
     <li><p>Configurações</p></li>
     <li class="menu-item"><a href="profile.html">Minha conta</a></li>
-    <li class="menu-item"><a href="#">Quem Somos</a></li>
+    <li class="menu-item"><a href="sobre-nos.html">Quem Somos</a></li>
 </ul>
 </nav>
 <nav>
-    <a href="#">
+   
         <div class="card-one">
-            <img src="assents/hbanner01.png" width="100%" alt="Logo do site: ilustração de Hermes ">
+            <img src="assents/banner.png" width="100%" alt="Logo do site: ilustração de Hermes ">
         </div>
-    </a>
+   
 </nav>
 
 <div class="container mt-5">
@@ -80,36 +112,188 @@
     </div>
 </div>
 
-
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="informacoesempresa">
-                    <h4>Hermes</h4>
-                </div>
+        <div class="footer-content">
+            <div class="informacoesempresa">
+                <img src="assents/hermes1.png" alt="Logo Hermes" class="footer-logo">
+            </div>
+            <div class="empresa-detalhes">
+                <h4>Hermes</h4>
                 <p>Site de Periféricos Hermes</p>
                 <p>Rua dos Periféricos, 123</p>
                 <p>Betim, MG, Brasil</p>
                 <p>Telefone: (31) 1234-5678</p>
                 <p>Email: contato@hermes.com.br</p>
             </div>
-            <div class="col-md-6">
-                <h4>Redes Sociais</h4>
-                <p>Siga-nos nas redes sociais:</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Facebook</a></li>
-                    <li class="list-inline-item"><a href="#">Instagram</a></li>
-                    <li class="list-inline-item"><a href="#">Twitter</a></li>
-                </ul>
-            </div>
         </div>
         <div class="row">
             <div class="col">
                 <p class="footer-address">Endereço: Betim, MG - Brasil</p>
-            </div>
+           
         </div>
     </div>
-</footer>
+    </div>
+</footer> 
 </body>
+<script>
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
+}
+
+function toggleCartMenu() {
+    const cartMenu = document.getElementById('cart-menu');
+    cartMenu.classList.toggle('open');
+}
+//fim 
+
+
+// Script para gerenciar o carrinho (carrinho.js)
+// Função para atualizar a lista de itens no carrinho
+function atualizarCarrinho() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalContainer = document.getElementById('cart-total');
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    cartItemsContainer.innerHTML = '';
+
+    carrinho.forEach(produto => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.classList.add('cart-item');
+        cartItemElement.innerHTML = `
+            <img src="${produto.imagem}" alt="Imagem do Produto" class="cart-item-image">
+            <div class="cart-item-info">
+                <p class="cart-item-name">${produto.titulo}</p>
+                <p class="cart-item-price">${produto.preco}</p>
+            </div>
+            <div class="cart-item-actions">
+                <button class="comprar-button" onclick="comprarProdutoDoCarrinhoPrincipal(${produto.id})">Comprar</button>
+                <button class="btn-remove" onclick="removerDoCarrinho(${produto.id})">Remover</button>
+            </div> 
+         `;
+
+        cartItemsContainer.appendChild(cartItemElement);
+    });
+
+    const totalPrice = carrinho
+        .map(produto => parseFloat(produto.preco.replace('R$', '').replace(',', '.')))
+        .reduce((total, preco) => total + preco, 0);
+
+    totalContainer.textContent = `R$ ${totalPrice.toFixed(2)}`;
+}
+
+
+
+function comprarProdutoDoCarrinhoPrincipal(idProduto) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const produto = carrinho.find(item => item.id === idProduto);
+
+    if (produto) {
+        sessionStorage.setItem('produtoCompra', JSON.stringify(produto));
+        window.location.href = 'telaPag.html';
+    } else {
+        console.error('Produto não encontrado no carrinho');
+    }
+}
+
+
+// Função para verificar se o carrinho está vazio e atualizar a visibilidade dos botões
+
+function verificarCarrinhoVazio() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const emptyCartMessage = document.getElementById('empty-cart-message');
+    if (carrinho.length === 0) {
+        emptyCartMessage.style.display = 'block';
+    } else {
+        emptyCartMessage.style.display = 'none';
+    }
+}
+
+// Função para atualizar o contador de itens no carrinho
+function atualizarContadorCarrinho() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = carrinho.length;
+}
+
+// Função para remover um item do carrinho
+function removerDoCarrinho(id) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    carrinho = carrinho.filter(produto => produto.id !== id);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarCarrinho();
+    atualizarContadorCarrinho();
+    verificarCarrinhoVazio();
+}
+
+// Função para limpar o carrinho completamente
+function limparCarrinho() {
+    localStorage.removeItem('carrinho');
+    atualizarCarrinho();
+    atualizarContadorCarrinho();
+    verificarCarrinhoVazio();
+}
+
+
+// Função para adicionar um item ao carrinho
+function adicionarAoCarrinho(produto) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    carrinho.push(produto);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    atualizarCarrinho();
+    atualizarContadorCarrinho();
+    verificarCarrinhoVazio();
+}
+
+// Função para obter detalhes do produto (usada na página de detalhes do produto)
+function obterDetalhesProduto() {
+    const produtoImagem = document.querySelector('.produto-imagem').src;
+    const produtoNome = document.querySelector('.produto-nome').textContent;
+    const produtoDescricao = document.querySelector('.produto-descricao').textContent;
+    const produtoMarca = document.querySelector('.marca').textContent;
+    const produtoDisponibilidade = document.querySelector('.disponibilidade').textContent;
+    const produtoPreco = document.querySelector('.preco').textContent;
+    const produtoGarantia = document.querySelector('.garantia').textContent;
+
+    return {
+        id: new Date().getTime(), // Usando timestamp como ID único
+        imagem: produtoImagem,
+        titulo: produtoNome,
+        descricao: produtoDescricao,
+        marca: produtoMarca,
+        disponibilidade: produtoDisponibilidade,
+        preco: produtoPreco,
+        garantia: produtoGarantia
+    };
+}
+
+// Event listener para inicialização quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    atualizarCarrinho();
+    atualizarContadorCarrinho();
+    verificarCarrinhoVazio();
+
+    const adicionarCarrinhoButton = document.getElementById('adicionar-carrinho');
+    const comprarButton = document.getElementById('comprar');
+
+    if (adicionarCarrinhoButton) {
+        adicionarCarrinhoButton.addEventListener('click', function() {
+            const produto = obterDetalhesProduto();
+            adicionarAoCarrinho(produto);
+        });
+    }
+
+    if (comprarButton) {
+        comprarButton.addEventListener('click', function() {
+            const produto = obterDetalhesProduto();
+            adicionarAoCarrinho(produto);
+            window.location.href = 'compra.html';
+        });
+    }
+});
+
+    </script>
+    
 </html>
