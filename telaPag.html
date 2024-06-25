@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forma de Pagamento</title>
     <link rel="stylesheet" href="telaPag.css">
-    <link rel="stylesheet" href="style.css">
+  
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="detalhes-produto.css">
+  <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assents/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="produtos.js"></script>
-    <script src="program.js"></script>
 </head>
 <body>
     <header>
@@ -19,14 +17,10 @@
             <img src="assents/menu-icon.png" alt="Ícone do menu" class="menu-icon" onclick="toggleMenu()">
             <a href="index.html" class="logo">Hermes</a>
             <div class="icons">
-                
-                    <a href="#">
-                        
-                    </a>
-                </div> </div></div>
-               
-
-    
+                <a href="#"></a>
+            </div>
+        </div>
+    </header>
     
     <nav>
         <ul class="menu" id="menu">
@@ -34,7 +28,6 @@
                 <img src="assents/close-icon.png" width="35px" alt="Ícone para fechar o menu" class="close-icon" onclick="toggleMenu()">
             </li>
             <h1><b>Hermes</b></h1>
-           
             <li><p>Configurações</p></li>
             <li class="menu-item"><a href="#">Minha conta</a></li>
             <li class="menu-item"><a href="sobre-nos.html">Quem Somos</a></li>
@@ -42,177 +35,163 @@
         </ul>
     </nav>
 
-    </header>
-   
-        <div class="wrapper">
-            <h2>Detalhes da Compra</h2>
-    
-            <div class="produto-container">
-                <img src="" alt="Imagem do Produto" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-nome"></h3>
-                   
-                    <p class="produto-preco"></p>
-        
-            </div></div>
-        
-            <form id="paymentForm">
-               <h4>Conta</h4>
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="text" placeholder="Nome completo" required class="name">
-                        <i class="fa fa-user icon"></i>
-                    </div>
-                    
-                </div>
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="email" placeholder="Endereço de email" required class="name">
-                        <i class="fa fa-envelope icon"></i>
-                    </div>
-                </div>
-              
-                <h4>Endereço de Envio</h4>
-                <div class="input_group">
-                    <div class="row">
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="cep" placeholder="CEP" required>
-                                <i class="fa fa-map-marker icon"></i>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="estado" placeholder="Estado" required>
-                                <i class="fa fa-institution icon"></i>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="cidade" placeholder="Cidade" required>
-                                <i class="fa fa-institution icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="bairro" placeholder="Bairro" required>
-                                <i class="fa fa-map-marker icon"></i>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="logradouro" placeholder="Rua/Avenida" required>
-                                <i class="fa fa-map-marker icon"></i>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="input_box">
-                                <input type="text" id="numerocasa1" placeholder="Número da casa" required>
-                                <i class="fa fa-home icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-       
-          
-                <h4>Forma de Entrega</h4>
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="radio" id="entrega_correios" name="forma_entrega" class="radio" checked>
-                        <label for="entrega_correios">Via Correios</label>
-                    </div>
-                    <div class="input_box">
-                        <input type="radio" id="entrega_transportadora" name="forma_entrega" class="radio">
-                        <label for="entrega_transportadora">Via Transportadora Hermes</label>
-                    </div>
-                </div>
-                
-             
-                
-                <h4>Detalhes do Pagamento</h4>
-    
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="text" id="cardName" placeholder="Nome no cartão" required class="name">
-                        <i class="fa fa-credit-card icon"></i>
-                    </div>
-                    <div class="input_box">
-                        <input type="tel" id="cardNumber" placeholder="Número do cartão" required>
-                        <i class="fa fa-credit-card icon"></i>
-                    </div>
-                </div>
-                
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="tel" id="cvc" placeholder="CVC" required>
-                        <i class="fa fa-lock icon"></i>
-                    </div>
-                    <div class="input_box">
-                        <input type="number" id="expMonth" placeholder="Mês de expiração" required>
-                        <i class="fa fa-calendar icon"></i>
-                    </div>
-                </div>
-                
-                <div class="input_group">
-                    <div class="input_box">
-                        <input type="number" id="expYear" placeholder="Ano de expiração" required>
-                        <i class="fa fa-calendar-o icon"></i>
-                    </div>
-                    <div class="input_box">
-                        <input type="number" id="amount" placeholder="Confirme o valor" required>
-                        <i class="fa fa-money icon"></i>
-                    </div>
-                </div>
-                
-                <div class="input_group">
-                    <div class="input_box">
-                        <button type="submit">Confirmar Compra</button>
-                    </div>
-                </div>
-                <div id="errorMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">
-                    Preencha todos os campos para finalizar o pagamento!
-                </div>
-    
+    <div class="wrapper" style="max-width: 500px; margin: 0 auto;">
+        <h2>Detalhes da Compra</h2>
+        <div class="produto-container">
+            <img src="" alt="Imagem do Produto" class="produto-imagem">
+            <div class="produto-info">
+                <h3 class="produto-nome"></h3>
+                <p class="produto-preco"></p>
             </div>
-            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
-                <p><span id="clientName"></span>, a Hermes agradece a sua compra do <span id="productName"></span>!</p>
-                <p>Aguarde, a qualquer momento atualizaremos as informações do seu pedido.</p>
-            </div>
-            </form>
         </div>
-    
 
-  
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="informacoesempresa">
-                <img src="assents/hermes1.png" alt="Logo Hermes" class="footer-logo">
+        <form id="paymentForm">
+            <h4>Conta</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Nome completo" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
             </div>
-            <div class="empresa-detalhes">
-                <h4>Hermes</h4>
-                <p>Site de Periféricos Hermes</p>
-                <p>Rua dos Periféricos, 123</p>
-                <p>Betim, MG, Brasil</p>
-                <p>Telefone: (31) 1234-5678</p>
-                <p>Email: contato@hermes.com.br</p>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Endereço de email" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
             </div>
+
+            <h4>Endereço de Envio</h4>
+            <div class="input_group">
+                <div class="row">
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="cep" placeholder="CEP" required>
+                            <i class="fa fa-map-marker icon"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="estado" placeholder="Estado" required>
+                            <i class="fa fa-institution icon"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="cidade" placeholder="Cidade" required>
+                            <i class="fa fa-institution icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="bairro" placeholder="Bairro" required>
+                            <i class="fa fa-map-marker icon"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="logradouro" placeholder="Rua/Avenida" required>
+                            <i class="fa fa-map-marker icon"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input_box">
+                            <input type="text" id="numerocasa1" placeholder="Número da casa" required>
+                            <i class="fa fa-home icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Forma de Entrega</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="radio" id="entrega_correios" name="forma_entrega" class="radio" checked>
+                    <label for="entrega_correios">Via Correios</label>
+                </div>
+                <div class="input_box">
+                    <input type="radio" id="entrega_transportadora" name="forma_entrega" class="radio">
+                    <label for="entrega_transportadora">Via Transportadora Hermes</label>
+                </div>
+            </div>
+
+            <h4>Detalhes do Pagamento</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" id="cardName" placeholder="Nome no cartão" required class="name">
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="tel" id="cardNumber" placeholder="Número do cartão" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" id="cvc" placeholder="CVC" required>
+                    <i class="fa fa-lock icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="number" id="expMonth" placeholder="Mês de expiração" required>
+                    <i class="fa fa-calendar icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="number" id="expYear" placeholder="Ano de expiração" required>
+                    <i class="fa fa-calendar-o icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="number" id="amount" placeholder="Confirme o valor" required>
+                    <i class="fa fa-money icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Confirmar Compra</button>
+                </div>
+            </div>
+            <div id="errorMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">
+                Preencha todos os campos para finalizar o pagamento!
+            </div>
+        </form>
+
+        <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            <p><span id="clientName"></span>, a Hermes agradece a sua compra do <span id="productName"></span>!</p>
+            <p>Aguarde, a qualquer momento atualizaremos as informações do seu pedido.</p>
         </div>
-        <div class="row">
-            <div class="col">
-                <p class="footer-address">Endereço: Betim, MG - Brasil</p>
-           
-        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="informacoesempresa">
+                        <img src="assents/hermes1.png" alt="Logo Hermes" class="footer-logo">
+                    </div>
+                    <div class="empresa-detalhes">
+                        <h4>Hermes</h4>
+                        <p>Site de Periféricos Hermes</p>
+                        <p>Rua dos Periféricos, 123</p>
+                        <p>Betim, MG, Brasil</p>
+                        <p>Telefone: (31) 1234-5678</p>
+                        <p>Email: contato@hermes.com.br</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="footer-address">Endereço: Betim, MG - Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    </div>
-    </footer>
+    
+    <script src="produtos.js"></script>
+    <script src="program.js"></script>
+
+
 
     <script>
-  
-
- 
   document.addEventListener('DOMContentLoaded', function() {
     const produtoCompra = JSON.parse(sessionStorage.getItem('produtoCompra'));
     const produtoCarrinho = JSON.parse(sessionStorage.getItem('produtoCarrinho'));
