@@ -52,6 +52,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 5px 0;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
 }
 
 .input_box {
@@ -65,7 +66,17 @@ body {
 }
 
 
-
+.input_box input[type="text"],
+.input_box input[type="tel"],
+.input_box input[type="number"] {
+    width: 100%; /* Define a largura para preencher toda a largura do seu container */
+    padding: 10px; /* Adiciona um padding interno para espaçamento */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    border: 1px solid #ccc; /* Adiciona uma borda para delineação */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do input */
+    margin-bottom: 10px; /* Adiciona espaço abaixo de cada input */
+}
 
 .input_box .name:focus, .dob:focus {
     -webkit-box-shadow: 0 0 2px 1px #1682ed ;
@@ -175,9 +186,10 @@ body {
     cursor: pointer;
     background-color: #1682ed;
 }
-.input_box .name {
+
+.input_box .name2 {
     color: #151515;
-    padding: 14px 10px 14px 50px;  /* Adicionei padding à esquerda */
+    padding: 14px 10px 14px 50px; 
     width: 100%;
     background-color: white;
     border: 1px solid #0003;
@@ -187,6 +199,7 @@ body {
     border-radius: 3px;
     color: #333;
 }
+
 
 .menu-item a:hover {
 text-decoration: none!important;
@@ -286,18 +299,8 @@ footer {
 }
 
 
-.input_box #cardName{
-    margin-bottom: -2px!important;
-}
 
-.input_box #cardName{
-   height: 20px;
-   margin-bottom: 10px;
-}
 
-#endereco_outro {
-    margin-top: 10px;
-}
 
 #valor_entrega {
     width: 100px;
@@ -399,17 +402,9 @@ header .menu a {
     text-decoration: none;
 }
 
-.input_box #bairro + .icon {
-    position: absolute; /* Define a posição absoluta para o ícone */
-    top: 13px; /* Ajusta a posição vertical do ícone */
-}
 
 
-.input_box #cardName + .icon {
-   
-    position: absolute; /* Define a posição absoluta para o ícone */
-    top: 15px; /* Ajusta a posição vertical do ícone */
-}
+
 
 .thank-you-message{
 
