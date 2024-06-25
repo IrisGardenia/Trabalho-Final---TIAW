@@ -1,0 +1,29 @@
+section{
+    margin-top: 70px!important;
+    margin: 80px;
+    color: #ffff;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+section h1 {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+.dadosf h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 70px!important;
+    margin: 80px;
+    color: #ffff;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+section hr {
+    opacity: 100%;
+    background-color: #ffff;
+}
