@@ -55,6 +55,12 @@ body {
     justify-content: center; /* Centraliza os elementos horizontalmente */
 }
 
+.input_box .name {
+    padding-left: 50px!important;
+
+}
+
+
 .input_box {
     width: 100%;
     margin-right:5px;
